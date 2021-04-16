@@ -1,0 +1,119 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#title_bar {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px 0 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#title_icon {
+    height: 65%;
+    background-color: white;
+    margin-right: 8px;
+}
+
+#title_icon img {
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+#name {
+    margin-left: 8px;
+    font-size: 28px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+#menu_icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    margin-left: auto;
+}
+
+#menu_icons svg {
+    padding: 2px;
+}
+
+#icons {
+    background-color: white;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    margin-left: auto;
+    font-size: 18px;
+    padding-right: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#icons a {
+    text-decoration: none;
+    color: inherit;
+    margin: 5px 8px 5px 8px;
+    transition: all 200ms ease-in-out;
+    display: inline-block;
+}
+
+#icons a:hover {
+    transform: scale(1.1, 1.2);
+    color: #167b7b;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query for `xs` since this is the default in Bootstrap*/
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    #icons {
+        display: none ;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    #name {
+        font-size: 38px;
+    }
+
+    #menu_icons {
+        display: none;
+    }
+
+    #icons {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
