@@ -7,27 +7,27 @@ function animate_skills() {
         i_skill = 0;
     }
     if (previous !== undefined) {
-        previous.css({'transform': 'scale(1, 1)'})
+        previous.css({'transform': 'scale(1, 1)', 'z-index': '1'})
     }
     let sk = $(skills.get(i_skill));
-    sk.css({'transform': 'scale(1.7, 1.7)'})
+    sk.css({'transform': 'scale(1.7, 1.7)', 'z-index': '1'})
     skills_description.html(sk.attr('alt'))
     previous = sk;
     i_skill += 1;
 }
 
 $(document).ready(function () {
-    $('#icons a').click(function () {
+    $('#menu_links a').click(function () {
         if ($(window).width() < 768) {
-            $('#icons').css({'display': 'none'})
+            $('#menu_links').css({'display': 'none'})
         }
     });
 
-    $('#menu_icons').click(function () {
-        if ($('#icons').css('display') === 'none') {
-            $('#icons').css({'display': 'flex'})
+    $('#menu_icon').click(function () {
+        if ($('#menu_links').css('display') === 'none') {
+            $('#menu_links').css({'display': 'flex'})
         } else {
-            $('#icons').css({'display': 'none'})
+            $('#menu_links').css({'display': 'none'})
         }
     })
     skills_description = $('#skill_description')
