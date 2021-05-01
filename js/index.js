@@ -7,7 +7,7 @@ function animate_skills() {
         i_skill = 0;
     }
     if (previous !== undefined) {
-        previous.css({'transform': 'scale(1, 1)', 'z-index': '1'})
+        previous.css({'transform': 'scale(1, 1)', 'z-index': '0'})
     }
     let sk = $(skills.get(i_skill));
     sk.css({'transform': 'scale(1.7, 1.7)', 'z-index': '1'})
