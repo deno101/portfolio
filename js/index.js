@@ -1,3 +1,21 @@
+let i_skill = 0;
+let skills, previous;
+let skills_description;
+
+function animate_skills() {
+    if (i_skill >= skills.length) {
+        i_skill = 0;
+    }
+    if (previous !== undefined) {
+        previous.css({'transform': 'scale(1, 1)'})
+    }
+    let sk = $(skills.get(i_skill));
+    sk.css({'transform': 'scale(1.7, 1.7)'})
+    skills_description.html(sk.attr('alt'))
+    previous = sk;
+    i_skill += 1;
+}
+
 $(document).ready(function () {
     $('#icons a').click(function () {
         if ($(window).width() < 768) {
@@ -12,5 +30,7 @@ $(document).ready(function () {
             $('#icons').css({'display': 'none'})
         }
     })
-
+    skills_description = $('#skill_description')
+    skills = $('#skills_icons img');
+    setInterval(animate_skills, 3000);
 })
