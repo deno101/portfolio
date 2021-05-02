@@ -71,18 +71,21 @@
         </div>
 
         <div id="contact_us">
-            <div id="container_name_email">
-                <label for="name">Name: </label>
-                <input type="text" placeholder="Enter name" name="name" id="form_name" required>
-                <label for="form_email">Email:</label>
-                <input type="email" name="email" id="form_email" placeholder="Enter you e-mail">
-            </div>
+            <form id="contact_us_form">
+                <div id="container_name_email">
+                    <label for="name">Name: </label>
+                    <input type="text" placeholder="Enter name" name="name" id="form_name" required>
+                    <label for="form_email">Email:</label>
+                    <input type="email" name="email" id="form_email" placeholder="Enter you e-mail" required>
+                </div>
 
-            <div id="container_textarea">
-                <label for="form_message">Message: </label>
-                <textarea name="message" id="form_message" cols="30" rows="6" placeholder="your message"></textarea>
-                <button id="submit_btn">Submit</button>
-            </div>
+                <div id="container_textarea">
+                    <label for="form_message">Message: </label>
+                    <textarea name="message" id="form_message" cols="30" rows="6" placeholder="your message"
+                              required></textarea>
+                    <button id="submit_btn">Submit</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
